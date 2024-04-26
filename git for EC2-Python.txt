@@ -1,0 +1,65 @@
+Git and GitHub:
+
+Open your project file in the git bash
+
+Go to the location where your files are there --> right click --> open with Git Bash --> lands you in the Git bash shell.
+
+
+-> Now to turn this into git repository the command is
+
+ ------> git init
+
+
+-> To track all files the command is  
+
+ ------> git add --all
+
+-> To commit the file  
+
+ ------> git commit -a -m "commit"
+
+to push an existing repository from local pc to github repo 
+
+First create a new repo in git hub
+
+Then, push existing repo to git hub using the following
+
+git remote add origin https://github.com/Yasaswiedme/Git.git
+
+--> to push all your files to your git hub repository use the command
+
+git push -u origin main/master
+
+-----------------------------------------------------------------------------------------------------------
+
+After the creating ec2 instance, copy public ip address in settings.py project file. Below line add in settings.py file
+
+-->   ALLOWED_HOSTS = ['Public IP of EC2', 'localhost', '0.0.0.0']
+
+Commit the changes that have been done.
+
+Now connect your EC2 with Putty to install few things
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+We made a few changes in github on the cloud.To get those changes back onto our local computer there are few different commands that we can use 
+    1st command is 
+ 
+ ------> git fetch
+ 
+  *this will download all the history from the remote tracking branches
+
+ 2nd command is 
+  
+ ------> git merge
+  
+ * that will now merge in with what we have on our local machine
+
+                      OR
+
+  We can directly write 
+ ------> git pull
+ 
+ *it wii do 1st and 2nd comands in just one command
