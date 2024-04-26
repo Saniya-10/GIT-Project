@@ -1,0 +1,54 @@
+Python with Django app deployement in ec2 instance.
+
+1) Create a ec2 instance 
+
+Note: In security group add a new rule.
+
+Type: Custom TCP, port range:8000, source: custom
+
+---------------------------------------------------------------------------------------------------------------
+ Open the putty and connect to it.later give the commands below.
+
+-> To become the root user give
+
+sudo su
+
+-> To update your OS up to date 
+
+yum update
+
+-> Now we need to Install git
+
+yum install git
+
+-> Now to copy all the files from your git hub repository to EC2 give
+
+git clone <repo_Link> (you can find the link in your github repo)
+
+-> To check the list of repositries in EC2 give
+
+ls
+
+-> To change your directory for the repo copied from github use
+
+cd <repo name>
+
+-> Now we need to Install python in EC2 give
+
+yum install python
+
+-> Now to Install pip in EC2 give
+
+yum install python3-pip
+
+-> Now to Install django in EC2 give
+
+pip install django
+
+-> Now To run the django project in EC2 give
+
+python manage.py runserver 0.0.0.0:8000 
+
+-> now to see your website, copy the public IP of your instance in the console and paste it in the browser with an extension of 8000 port.
+
+Ex: http://<Ip_address>:8000
